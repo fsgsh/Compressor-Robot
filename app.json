@@ -1,10 +1,10 @@
 {
-    "name": "CompressorBot",
-    "description": "A Normal Telegram Bot Which can Compress/encode/ Generate Samples of videos.",
-    "logo": " #https://telegra.ph/file/75ee20ec8d8c8bba84f02.jpg",
+    "name": "Safone Compressor Bot",
+    "description": "A Normal Telegram Bot Which can Compress/Encode/ Generate Samples of videos.",
+    "logo": "https://telegra.ph/file/68ba9706cdf78f28b4a8c.jpg",
     "keywords": ["Telegram","python", "Video","Compressor","Encoder"],
-    "repository": "https://github.com/1Danish-00/CompressorBot",
-    "success_url": "https://t.me/danish_00",
+    "repository": "https://github.com/AsmSafone/CompressorBot",
+    "success_url": "https://t.me/AsmSafone",
     "stack": "container",
     "env": {
         "APP_ID": {
