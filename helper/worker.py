@@ -231,7 +231,7 @@ async def encod(event):
         os.mkdir(rr)
     bb = kk.replace(f".{aa}", " compressed.mkv")
     out = f"{rr}/{bb}"
-    thum = "75ee20ec8d8c8bba84f02.jpg"
+    thum = "68ba9706cdf78f28b4a8c.jpg"
     dtime = ts(int((es - s).seconds) * 1000)
     hehe = f"{out};{dl};{thum};{dtime}"
     key = code(hehe)
