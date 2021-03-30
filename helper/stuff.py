@@ -29,12 +29,12 @@ async def up(event):
 async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.reply(
-        f"Hi `{ok.user.first_name}`\nThis is A Compressor Bot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.",
+        f"👋🏻 **Hi `{ok.user.first_name}`,**\n\nThis Is **HEVC Compressor Bot** 🗜\n Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Samples / Screenshots Too...🤗",
         buttons=[
-            [Button.inline("HELP", data="ihelp")],
+            [Button.inline("⚙️ HELP ⚙️", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="github.com/1Danish-00/CompressorBot"),
-                Button.url("DEVELOPER", url="t.me/danish_00"),
+                Button.url("💬 SUPPORT", url="t.me/SafoTheBot"),
+                Button.url("DEVELOPER 🧑‍💻", url="t.me/I_Am_Only_One_1"),
             ],
         ],
     )
@@ -42,26 +42,26 @@ async def start(event):
 
 async def help(event):
     await event.reply(
-        "**🐠 A Quality Compressor Bot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options"
+        "**A Quality Compressor Bot** 🗜\n\n☑️ I Can Compress Your Videos With Negligible Quality Change.\n☑️ I Can Generate Sample Compressed Videos & Screenshots Too.\n☑️ Just Forward Video To Get Options!\n☑️ Due To Quality Settings Bot Takes Time To Compress. So, Be Patience & Send Videos One By One After Completing. Please Dont Spam Bot!!\n\n🏷 **Developer: @I_Am_Only_One_1**"
     )
 
 
 async def ihelp(event):
     await event.edit(
-        "**🐠 A Quality Compressor Bot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Screenshots Too\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options",
-        buttons=[Button.inline("BACK", data="beck")],
+        "**A Quality Compressor Bot** 🗜\n\n☑️ I Can Compress Your Videos With Negligible Quality Change.\n☑️ I Can Generate Sample Compressed Videos & Screenshots Too.\n☑️ Just Forward Video To Get Options!\n☑️ Due To Quality Settings Bot Takes Time To Compress. So, Be Patience & Send Videos One By One After Completing. Please Dont Spam Bot!!\n\n🏷 **Developer: @I_Am_Only_One_1**",
+        buttons=[Button.inline("🔙 BACK", data="beck")],
     )
 
 
 async def beck(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.edit(
-        f"Hi `{ok.user.first_name}`\nThis is A Compressor Bot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.",
+        f"👋🏻 **Hi `{ok.user.first_name}`,**\n\nThis Is **HEVC Compressor Bot** 🗜\n Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Samples / Screenshots Too...🤗",
         buttons=[
-            [Button.inline("HELP", data="ihelp")],
+            [Button.inline("⚙️ HELP ⚙️", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="github.com/1Danish-00/"),
-                Button.url("DEVELOPER", url="t.me/danish_00"),
+                Button.url("💬 SUPPORT", url="t.me/SafoTheBot"),
+                Button.url("DEVELOPER 🧑‍💻", url="t.me/I_Am_Only_One_1"),
             ],
         ],
     )
@@ -73,10 +73,10 @@ async def sencc(e):
         "Choose Mode",
         buttons=[
             [
-                Button.inline("Default Compress", data=f"encc{key}"),
-                Button.inline("Custom Compress", data=f"ccom{key}"),
+                Button.inline("DEFAULT", data=f"encc{key}"),
+                Button.inline("CUSTOM", data=f"ccom{key}"),
             ],
-            [Button.inline("Back", data=f"back{key}")],
+            [Button.inline("BACK", data=f"back{key}")],
         ],
     )
 
@@ -84,20 +84,20 @@ async def sencc(e):
 async def back(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "🐠  **What To Do** 🐠",
+        "**What Do You Want ??** 🤔",
         buttons=[
             [
-                Button.inline("GENERATE SAMPLE", data=f"gsmpl{key}"),
+                Button.inline("COMPRESS", data=f"sencc{key}"),
                 Button.inline("SCREENSHOTS", data=f"sshot{key}"),
             ],
-            [Button.inline("COMPRESS", data=f"sencc{key}")],
+            [Button.inline("GENERATE SAMPLE VIDEO", data=f"gsmpl{key}")],
         ],
     )
 
 
 async def ccom(e):
     COUNT.append(e.chat_id)
-    await e.edit("Send Ur Custom Name For That File")
+    await e.edit("Send Your Custom Name For That File:")
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     out, dl, thum, dtime = wh.split(";")
