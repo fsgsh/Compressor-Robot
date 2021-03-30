@@ -38,10 +38,10 @@ async def screenshot(e):
         "Check Screenshots Above 😁",
         buttons=[
             [
-                Button.inline("GENERATE SAMPLE", data=f"gsmpl{wah}"),
+                Button.inline("SKIP", data=f"skip{wah}"),
                 Button.inline("COMPRESS", data=f"sencc{wah}"),
             ],
-            [Button.inline("SKIP", data=f"skip{wah}")],
+            [Button.inline("GENERATE SAMPLE VIDEO", data=f"gsmpl{wah}")],
         ],
     )
     COUNT.remove(e.chat_id)
@@ -76,7 +76,7 @@ async def encc(e):
     nn = await e.edit(
         "`Compressing..`",
         buttons=[
-            [Button.inline("STATS", data=f"stats{wah}")],
+            [Button.inline("STATUS", data=f"stats{wah}")],
             [Button.inline("CANCEL PROCESS", data=f"skip{wah}")],
         ],
     )
@@ -88,7 +88,7 @@ async def encc(e):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+            await e.edit(str(er) + "\n\n**ERROR** Contact @I_Am_Only_One_1")
             return
     except:
         pass
@@ -116,7 +116,7 @@ async def encc(e):
     xx = ts(int((ees - es).seconds) * 1000)
     xxx = ts(int((eees - ees).seconds) * 1000)
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}"
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\n\nBy, @I_Am_Only_One_1 🔥"
     )
     await ds.forward_to(LOG)
     await dk.forward_to(LOG)
@@ -135,7 +135,7 @@ async def sample(e):
     xxx = await e.edit(
         "`Generating Sample...`",
         buttons=[
-            [Button.inline("STATS", data=f"stats{wah}")],
+            [Button.inline("STATUS", data=f"stats{wah}")],
             [Button.inline("CANCEL PROCESS", data=f"skip{wah}")],
         ],
     )
@@ -147,7 +147,7 @@ async def sample(e):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+            await e.edit(str(er) + "\n\n**ERROR** Contact @I_Am_Only_One_1")
             return
     except:
         pass
@@ -187,22 +187,22 @@ async def encod(event):
         return
     if (event.media.document.size) < 1024 * 1024 * 3:
         return await event.reply(
-            "U Sending Less then 3Mb of Video To Compress\nGreat...😑"
+            "You Sending Less Than 3MB of Video To Compress!\n🤔 Great...😑"
         )
     xxx = await event.reply("`Downloading...`")
     # pp = []
-    # async for x in event.client.iter_participants("BoTT_inFo"):
+    # async for x in event.client.iter_participants("AsmSafone"):
     #    pp.append(x.id)
     # if (user.id) not in pp:
     #    return await xxx.edit(
     #        "U Must Subscribe This Channel To Use This Bot",
-    #        buttons=[Button.url("JOIN CHANNEL", url="t.me/BoTT_inFo")],
+    #        buttons=[Button.url("JOIN CHANNEL", url="t.me/AsmSafone")],
     #    )
     if len(COUNT) > 4 and user.id != OWNER:
         llink = (await event.client(cl(LOG))).link
         return await xxx.edit(
-            "Overload Already 5 Process Running",
-            buttons=[Button.url("Working Status", url=llink)],
+            "Overloaded😢 Already 5 Process Running!😑",
+            buttons=[Button.url("Check Working Status", url=llink)],
         )
     COUNT.append(user.id)
     s = dt.now()
@@ -211,7 +211,7 @@ async def encod(event):
     gg = await event.client.get_entity(user.id)
     name = f"[{get_display_name(gg)}](tg://user?id={user.id})"
     await event.client.send_message(
-        LOG, f"{len(COUNT)} Downloading Started for user - {name}"
+        LOG, f"{len(COUNT)} Downloading Started For - {name} !"
     )
     dir = f"downloads/{user.id}/"
     if not os.path.isdir(dir):
@@ -239,13 +239,13 @@ async def encod(event):
     COUNT.remove(user.id)
     await event.client.send_message(
         event.chat_id,
-        "🐠DOWNLODING COMPLETED!!🐠",
+        "DOWNLODING COMPLETED!! 🥳",
         buttons=[
             [
-                Button.inline("GENERATE SAMPLE", data=f"gsmpl{key}"),
+                Button.inline("COMPRESS", data=f"sencc{key}"),
                 Button.inline("SCREENSHOTS", data=f"sshot{key}"),
             ],
-            [Button.inline("COMPRESS", data=f"sencc{key}")],
+            [Button.inline("GENERATE SAMPLE VIDEO", data=f"gsmpl{key}")],
         ],
     )
 
@@ -258,7 +258,7 @@ async def customenc(e, key):
     nn = await e.edit(
         "`Compressing..`",
         buttons=[
-            [Button.inline("STATS", data=f"stats{wah}")],
+            [Button.inline("STATUS", data=f"stats{wah}")],
             [Button.inline("CANCEL PROCESS", data=f"skip{wah}")],
         ],
     )
@@ -270,7 +270,7 @@ async def customenc(e, key):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+            await e.edit(str(er) + "\n\n**ERROR** Contact @I_Am_Only_One_1")
             return
     except:
         pass
@@ -298,7 +298,7 @@ async def customenc(e, key):
     xx = ts(int((ees - es).seconds) * 1000)
     xxx = ts(int((eees - ees).seconds) * 1000)
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}"
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\n\nBy, @I_Am_Only_One_1 🔥"
     )
     await ds.forward_to(LOG)
     await dk.forward_to(LOG)
