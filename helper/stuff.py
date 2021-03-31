@@ -29,7 +29,7 @@ async def up(event):
 async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.reply(
-        f"👋🏻 **Hi `{ok.user.first_name}`,**\n\nThis Is **HEVC Compressor Bot** 🗜\n Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Samples / Screenshots Too...🤗",
+        f"👋🏻 **Hi `{ok.user.first_name}`!**\n\nThis Is **Video Compressor (HEVC) Bot** 🗜\n Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Samples / Screenshots Too...🤗",
         buttons=[
             [Button.inline("⚙️ HELP ⚙️", data="ihelp")],
             [
@@ -42,13 +42,13 @@ async def start(event):
 
 async def help(event):
     await event.reply(
-        "**A Quality Compressor Bot** 🗜\n\n☑️ I Can Compress Your Videos With Negligible Quality Change.\n☑️ I Can Generate Sample Compressed Videos & Screenshots Too.\n☑️ Just Forward Video To Get Options!\n☑️ Due To Quality Settings Bot Takes Time To Compress. So, Be Patience & Send Videos One By One After Completing. Please Dont Spam Bot!!\n\n🏷 **Developer: @I_Am_Only_One_1**"
+        "**Video Compressor (HEVC) Bot** 🗜\n\n☑️ I Can Compress Your Videos With Negligible Quality Change.\n☑️ I Can Generate Sample Compressed Videos & Screenshots Too.\n☑️ Just Forward Video To Get Options!\n☑️ Due To Quality Settings Bot Takes Time To Compress. So, Be Patience & Send Videos One By One After Completing. Please Dont Spam Bot!!\n\n🏷 **Developer: @I_Am_Only_One_1**"
     )
 
 
 async def ihelp(event):
     await event.edit(
-        "**A Quality Compressor Bot** 🗜\n\n☑️ I Can Compress Your Videos With Negligible Quality Change.\n☑️ I Can Generate Sample Compressed Videos & Screenshots Too.\n☑️ Just Forward Video To Get Options!\n☑️ Due To Quality Settings Bot Takes Time To Compress. So, Be Patience & Send Videos One By One After Completing. Please Dont Spam Bot!!\n\n🏷 **Developer: @I_Am_Only_One_1**",
+        "**Video Compressor (HEVC) Bot** 🗜\n\n☑️ I Can Compress Your Videos With Negligible Quality Change.\n☑️ I Can Generate Sample Compressed Videos & Screenshots Too.\n☑️ Just Forward Video To Get Options!\n☑️ Due To Quality Settings Bot Takes Time To Compress. So, Be Patience & Send Videos One By One After Completing. Please Dont Spam Bot!!\n\n🏷 **Developer: @I_Am_Only_One_1**",
         buttons=[Button.inline("🔙 BACK", data="beck")],
     )
 
@@ -56,7 +56,7 @@ async def ihelp(event):
 async def beck(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.edit(
-        f"👋🏻 **Hi `{ok.user.first_name}`,**\n\nThis Is **HEVC Compressor Bot** 🗜\n Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Samples / Screenshots Too...🤗",
+        f"👋🏻 **Hi `{ok.user.first_name}`!**\n\nThis Is **Video Compressor (HEVC) Bot** 🗜\n Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Samples / Screenshots Too...🤗",
         buttons=[
             [Button.inline("⚙️ HELP ⚙️", data="ihelp")],
             [
