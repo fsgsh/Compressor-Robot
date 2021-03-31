@@ -29,7 +29,7 @@ async def up(event):
 async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.reply(
-        f"👋🏻 **Hi `{ok.user.first_name}`!**\n\nThis Is **Video Compressor (HEVC) Bot** 🗜\n Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Samples / Screenshots Too...🤗",
+        f"👋🏻 **Hi `{ok.user.first_name}` !**\n\nI'm **Video Compressor (HEVC) Bot** 🗜\n Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Samples / Screenshots Too...🤗",
         buttons=[
             [Button.inline("⚙️ HELP ⚙️", data="ihelp")],
             [
@@ -42,13 +42,13 @@ async def start(event):
 
 async def help(event):
     await event.reply(
-        "**Video Compressor (HEVC) Bot** 🗜\n\n☑️ I Can Compress Your Videos With Negligible Quality Change.\n☑️ I Can Generate Sample Compressed Videos & Screenshots Too.\n☑️ Just Forward Video To Get Options!\n☑️ Due To Quality Settings Bot Takes Time To Compress. So, Be Patience & Send Videos One By One After Completing. Please Dont Spam Bot!!\n\n🏷 **Developer: @I_Am_Only_One_1**"
+        "**Video Compressor (HEVC) Bot** 🗜\n\n☑️ I Can Compress Your Videos With Negligible Quality Change.\n☑️ I Can Generate Sample Videos & Screenshots Too.\n☑️ Just Forward Video To Get Options!\n☑️ Due To Quality Settings Bot Takes Time To Compress. So, Be Patience & Send Videos One By One After Completing. Please Don't Spam!!\n\n🏷 **Developer: @I_Am_Only_One_1**🔥"
     )
 
 
 async def ihelp(event):
     await event.edit(
-        "**Video Compressor (HEVC) Bot** 🗜\n\n☑️ I Can Compress Your Videos With Negligible Quality Change.\n☑️ I Can Generate Sample Compressed Videos & Screenshots Too.\n☑️ Just Forward Video To Get Options!\n☑️ Due To Quality Settings Bot Takes Time To Compress. So, Be Patience & Send Videos One By One After Completing. Please Dont Spam Bot!!\n\n🏷 **Developer: @I_Am_Only_One_1**",
+        "**Video Compressor (HEVC) Bot** 🗜\n\n☑️ I Can Compress Your Videos With Negligible Quality Change.\n☑️ I Can Generate Sample Videos & Screenshots Too.\n☑️ Just Forward Video To Get Options!\n☑️ Due To Quality Settings Bot Takes Time To Compress. So, Be Patience & Send Videos One By One After Completing. Please Don't Spam!!\n\n🏷 **Developer: @I_Am_Only_One_1**🔥",
         buttons=[Button.inline("🔙 BACK", data="beck")],
     )
 
@@ -56,7 +56,7 @@ async def ihelp(event):
 async def beck(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.edit(
-        f"👋🏻 **Hi `{ok.user.first_name}`!**\n\nThis Is **Video Compressor (HEVC) Bot** 🗜\n Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Samples / Screenshots Too...🤗",
+        f"👋🏻 **Hi `{ok.user.first_name}` !**\n\nI'm **Video Compressor (HEVC) Bot** 🗜\n Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Samples / Screenshots Too...🤗",
         buttons=[
             [Button.inline("⚙️ HELP ⚙️", data="ihelp")],
             [
@@ -70,7 +70,7 @@ async def beck(event):
 async def sencc(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "Choose Mode",
+        "Choose One (Default Suggested) :",
         buttons=[
             [
                 Button.inline("DEFAULT", data=f"encc{key}"),
@@ -84,7 +84,7 @@ async def sencc(e):
 async def back(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "**What Do You Want ??** 🤔",
+        "**What Do You Want To Do??** 🤔",
         buttons=[
             [
                 Button.inline("COMPRESS", data=f"sencc{key}"),
@@ -97,7 +97,7 @@ async def back(e):
 
 async def ccom(e):
     COUNT.append(e.chat_id)
-    await e.edit("Send Your Custom Name For That File:")
+    await e.edit("Okay, Send Your Custom Name For That File.")
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     out, dl, thum, dtime = wh.split(";")
@@ -112,7 +112,7 @@ async def ccom(e):
             g = repl.text + ".mkv"
         outt = f"encode/{chat}/{g}"
         x = await repl.reply(
-            f"Custom File Name : {g}\n\nSend Thumbnail Picture For it."
+            f"Custom File Name : {g}\n\nNow, Send Thumbnail Picture For it."
         )
         replyy = cv.wait_event(events.NewMessage(from_users=chat))
         rep = await replyy
@@ -124,7 +124,7 @@ async def ccom(e):
             tb = url.replace("https://telegra.ph/file/", "")
         else:
             tb = thum
-        omk = await rep.reply(f"Thumbnail {tb} Setted Successfully")
+        omk = await rep.reply(f"Thumbnail {tb} Set Successfully!")
         hehe = f"{outt};{dl};{tb};{dtime}"
         key = code(hehe)
         await customenc(omk, key)
