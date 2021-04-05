@@ -190,14 +190,14 @@ async def encod(event):
             "You Sending Less Than 3MB of Video To Compress!\n🤔 Great...😑"
         )
     xxx = await event.reply("`Downloading...`")
-     pp = []
-     async for x in event.client.iter_participants("AsmSafone"):
-        pp.append(x.id)
-     if (user.id) not in pp:
-        return await xxx.edit(
-            "You Must Subscribe My Channel To Use This Bot!",
-            buttons=[Button.url("JOIN CHANNEL", url="t.me/AsmSafone")],
-        )
+    # pp = []
+    # async for x in event.client.iter_participants("AsmSafone"):
+    #    pp.append(x.id)
+    # if (user.id) not in pp:
+    #    return await xxx.edit(
+    #        "U Must Subscribe This Channel To Use This Bot",
+    #        buttons=[Button.url("JOIN CHANNEL", url="t.me/AsmSafone")],
+    #    )
     if len(COUNT) > 4 and user.id != OWNER:
         llink = (await event.client(cl(LOG))).link
         return await xxx.edit(
