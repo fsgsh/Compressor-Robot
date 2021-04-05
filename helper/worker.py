@@ -116,7 +116,7 @@ async def encc(e):
     xx = ts(int((ees - es).seconds) * 1000)
     xxx = ts(int((eees - ees).seconds) * 1000)
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\nBy, @I_Am_Only_One_1 🔥"
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\n\nBy, @I_Am_Only_One_1 🔥"
     )
     await ds.forward_to(LOG)
     await dk.forward_to(LOG)
@@ -190,19 +190,19 @@ async def encod(event):
             "You Sending Less Than 3MB of Video To Compress!\n🤔 Great...😑"
         )
     xxx = await event.reply("`Downloading...`")
-    # pp = []
-    # async for x in event.client.iter_participants("AsmSafone"):
-    #    pp.append(x.id)
-    # if (user.id) not in pp:
-    #    return await xxx.edit(
-    #        "U Must Subscribe This Channel To Use This Bot",
-    #        buttons=[Button.url("JOIN CHANNEL", url="t.me/AsmSafone")],
-    #    )
+     pp = []
+     async for x in event.client.iter_participants("AsmSafone"):
+        pp.append(x.id)
+     if (user.id) not in pp:
+        return await xxx.edit(
+            "You Must Subscribe My Channel To Use This Bot!",
+            buttons=[Button.url("JOIN CHANNEL", url="t.me/AsmSafone")],
+        )
     if len(COUNT) > 4 and user.id != OWNER:
         llink = (await event.client(cl(LOG))).link
         return await xxx.edit(
-            "Server Overloaded😢 \nAlready 5 Process Running!😑",
-            buttons=[Button.url("Check Working Status", url=llink)],
+            "Server Overloaded😢 \nAlready 5 Compression Running!😑",
+            buttons=[Button.url("🤖 Check Working Status 🤖", url=llink)],
         )
     COUNT.append(user.id)
     s = dt.now()
@@ -211,7 +211,7 @@ async def encod(event):
     gg = await event.client.get_entity(user.id)
     name = f"[{get_display_name(gg)}](tg://user?id={user.id})"
     await event.client.send_message(
-        LOG, f"🤖 {len(COUNT)} Process Started For - {name} !"
+        LOG, f"✅ {len(COUNT)} Compression Process Started By - {name} !"
     )
     dir = f"downloads/{user.id}/"
     if not os.path.isdir(dir):
@@ -298,7 +298,7 @@ async def customenc(e, key):
     xx = ts(int((ees - es).seconds) * 1000)
     xxx = ts(int((eees - ees).seconds) * 1000)
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\nBy, @I_Am_Only_One_1 🔥"
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\n\nBy, @I_Am_Only_One_1 🔥"
     )
     await ds.forward_to(LOG)
     await dk.forward_to(LOG)
