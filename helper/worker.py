@@ -74,7 +74,7 @@ async def encc(e):
     wh = decode(wah)
     out, dl, thum, dtime = wh.split(";")
     nn = await e.edit(
-        "`Compressing..`",
+        "`Compressing...`",
         buttons=[
             [Button.inline("STATUS", data=f"stats{wah}")],
             [Button.inline("CANCEL PROCESS", data=f"skip{wah}")],
@@ -201,7 +201,7 @@ async def encod(event):
     if len(COUNT) > 4 and user.id != OWNER:
         llink = (await event.client(cl(LOG))).link
         return await xxx.edit(
-            "Server Overloaded😢 \nAlready 5 Compression Running!😑",
+            "Server Overloaded😢 \nAlready 5 Compression Processing!😑",
             buttons=[Button.url("🤖 Check Working Status 🤖", url=llink)],
         )
     COUNT.append(user.id)
@@ -211,7 +211,7 @@ async def encod(event):
     gg = await event.client.get_entity(user.id)
     name = f"[{get_display_name(gg)}](tg://user?id={user.id})"
     await event.client.send_message(
-        LOG, f"✅ {len(COUNT)} Compression Process Started By - {name} !"
+        LOG, f"✅ Compressing {len(COUNT)} Video Started For - {name} !"
     )
     dir = f"downloads/{user.id}/"
     if not os.path.isdir(dir):
@@ -220,7 +220,7 @@ async def encod(event):
         event.media,
         dir,
         progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-            progress(d, t, xxx, ttt, "Downloading")
+            progress(d, t, xxx, ttt, "Downloading...")
         ),
     )
     es = dt.now()
