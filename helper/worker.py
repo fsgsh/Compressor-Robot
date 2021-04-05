@@ -35,7 +35,7 @@ async def screenshot(e):
     await e.client.send_file(e.chat_id, pic)
     await e.client.send_message(
         e.chat_id,
-        "Check Screenshots Above 😁",
+        "Please Check Your Screenshots Above! 😊",
         buttons=[
             [
                 Button.inline("SKIP", data=f"skip{wah}"),
