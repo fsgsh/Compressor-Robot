@@ -239,7 +239,7 @@ async def encod(event):
     COUNT.remove(user.id)
     await event.client.send_message(
         event.chat_id,
-        "DOWNLODING COMPLETED!! 🥳",
+        "Select An Option:",
         buttons=[
             [
                 Button.inline("COMPRESS", data=f"sencc{key}"),
