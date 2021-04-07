@@ -116,7 +116,7 @@ async def encc(e):
     xx = ts(int((ees - es).seconds) * 1000)
     xxx = ts(int((eees - ees).seconds) * 1000)
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nUploaded in {xxx}\nDownloaded in {x}\nCompressed in {xx}\nFor - {name} 👑"
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\nBy @I_Am_Only_One_1 👑"
     )
     await ds.forward_to(LOG)
     await dk.forward_to(LOG)
@@ -201,7 +201,7 @@ async def encod(event):
     if len(COUNT) > 4 and user.id != OWNER:
         llink = (await event.client(cl(LOG))).link
         return await xxx.edit(
-            "**Server Overloaded😢 \nAlready 5 Compression Processing!**😑",
+            "**Server Overloaded😢** \nAlready 5 Compression Processing!😑",
             buttons=[Button.url("🤖 Check Working Status 🤖", url=llink)],
         )
     COUNT.append(user.id)
@@ -211,7 +211,7 @@ async def encod(event):
     gg = await event.client.get_entity(user.id)
     name = f"[{get_display_name(gg)}](tg://user?id={user.id})"
     await event.client.send_message(
-        LOG, f"🎬 __**Compressing... {len(COUNT)} File \nStarted For - {name} !✅**__"
+        LOG, f"🎬 **Compressing Video: {len(COUNT)}**  \n**Started For: {name} **✅"
     )
     dir = f"downloads/{user.id}/"
     if not os.path.isdir(dir):
@@ -298,7 +298,7 @@ async def customenc(e, key):
     xx = ts(int((ees - es).seconds) * 1000)
     xxx = ts(int((eees - ees).seconds) * 1000)
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nUploaded in {xxx}\nDownloaded in {x}\nCompressed in {xx}\nFor - {name} 👑"
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\nBy @I_Am_Only_One_1 👑"
     )
     await ds.forward_to(LOG)
     await dk.forward_to(LOG)
