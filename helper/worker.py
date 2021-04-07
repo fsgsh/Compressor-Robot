@@ -88,7 +88,7 @@ async def encc(e):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @I_Am_Only_One_1")
+            await e.edit(str(er) + "\n\n**ERROR** Contact @I_Am_Only_One_1 👑")
             return
     except:
         pass
@@ -116,7 +116,7 @@ async def encc(e):
     xx = ts(int((ees - es).seconds) * 1000)
     xxx = ts(int((eees - ees).seconds) * 1000)
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nUploaded in {xxx}\nDownloaded in {x}\nCompressed in {xx}\nBy @I_Am_Only_One_1 👑"
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nUploaded in {xxx}\nDownloaded in {x}\nCompressed in {xx}\nFor - {name} 👑"
     )
     await ds.forward_to(LOG)
     await dk.forward_to(LOG)
@@ -147,7 +147,7 @@ async def sample(e):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @I_Am_Only_One_1")
+            await e.edit(str(er) + "\n\n**ERROR** Contact @I_Am_Only_One_1 👑")
             return
     except:
         pass
@@ -270,7 +270,7 @@ async def customenc(e, key):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @I_Am_Only_One_1")
+            await e.edit(str(er) + "\n\n**ERROR** Contact @I_Am_Only_One_1 👑")
             return
     except:
         pass
@@ -298,7 +298,7 @@ async def customenc(e, key):
     xx = ts(int((ees - es).seconds) * 1000)
     xxx = ts(int((eees - ees).seconds) * 1000)
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nUploaded in {xxx}\nDownloaded in {x}\nCompressed in {xx}\nBy @I_Am_Only_One_1 👑"
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nUploaded in {xxx}\nDownloaded in {x}\nCompressed in {xx}\nFor - {name} 👑"
     )
     await ds.forward_to(LOG)
     await dk.forward_to(LOG)
