@@ -3,7 +3,7 @@
     "description": "A Normal Telegram Bot Which can Compress/Encode/ Generate Samples of videos.",
     "logo": "https://telegra.ph/file/68ba9706cdf78f28b4a8c.jpg",
     "keywords": ["Telegram","python", "Video","Compressor","Encoder"],
-    "repository": "https://github.com/AsmSafone/CompressorBot",
+    "repository": "https://github.com/AsmSafone/HevcCompressorBot",
     "success_url": "https://t.me/AsmSafone",
     "stack": "container",
     "env": {
