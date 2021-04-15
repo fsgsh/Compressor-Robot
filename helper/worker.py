@@ -58,7 +58,7 @@ async def stats(e):
         out, dl, thum, dtime = wh.split(";")
         ot = hbs(int(Path(out).stat().st_size))
         ov = hbs(int(Path(dl).stat().st_size))
-        ans = f"Downloaded:\n{ov}\n\nCompressing:\n{ot}\n\nGet Updates @AsmSafone! "
+        ans = f"Downloaded:\n{ov}\n\nCompressing:\n{ot}\n\nGet Updates @AsmSafone"
         await e.answer(ans, cache_time=0, alert=True)
     except BaseException:
         await e.answer("Something Went Wrong 🤔\nPlease Resend That Media!", cache_time=0, alert=True)
@@ -218,12 +218,12 @@ async def encod(event):
     if len(COUNT) > 3 and user.id != OWNER:
         llink = (await event.client(cl(LOG))).link
         return await xxx.edit(
-            "**Server Overloaded 😢** \nAlready 5 Compression Running!😑",
+            "**Server Overloaded 😑** \nAlready 5 Compression Running!",
             buttons=[Button.url("🤖 Check Working Status 🤖", url=llink)],
         )
     if user.id in COUNT and user.id != OWNER:
         return await xxx.edit(
-            "Already Your 1 Request Processing\nPlease Wait Until Finish That! 😊"
+            "Already Your 1 Request Processing\nPlease Wait Until It Get Finished! 😊"
         )
     COUNT.append(user.id)
     s = dt.now()
