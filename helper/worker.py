@@ -35,7 +35,7 @@ async def screenshot(e):
         await e.client.send_file(e.chat_id, pic)
         await e.client.send_message(
             e.chat_id,
-            "Please Check Your Screenshots Above! 😊",
+            "**Please Check Your Screenshots Above!** 😊",
             buttons=[
                 [
                     Button.inline("SKIP", data=f"skip{wah}"),
@@ -242,7 +242,7 @@ async def encod(event):
             event.media,
             dir,
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(d, t, xxx, ttt, "Downloading...")
+                progress(d, t, xxx, ttt, "Downloading")
             ),
         )
     except BaseException:
