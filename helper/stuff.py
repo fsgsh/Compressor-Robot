@@ -96,7 +96,6 @@ async def back(e):
 
 
 async def ccom(e):
-    COUNT.append(e.chat_id)
     await e.edit("Okay, Send Your Custom Name For That File.")
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
