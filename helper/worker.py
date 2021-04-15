@@ -266,7 +266,7 @@ async def encod(event):
     COUNT.remove(user.id)
     await event.client.send_message(
         event.chat_id,
-        f"Select An Option: ([mediainfo]({inf}))",
+        f"**Select An Option:** ([mediainfo]({inf}))",
         link_preview=False,
         buttons=[
             [
