@@ -29,12 +29,12 @@ async def up(event):
 async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.reply(
-        f"👋🏻 **Hi `{ok.user.first_name}` !**\n\nI'm **Video Compressor HEVC**🔥\n__Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Sample Videos / Screenshots Too 🤗__",
+        f"👋🏻 **Hi `{ok.user.first_name}` !**\n\nI'm **Video Compressor HEVC**🔥\n__Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Sample Videos / Screenshots Too!🤗__",
         buttons=[
             [Button.inline("⚙️ HELP ⚙️", data="ihelp")],
             [
-                Button.url("💬 SUPPORT", url="t.me/SafoTheBot"),
-                Button.url("DEVELOPER 🧑‍💻", url="t.me/I_Am_Only_One_1"),
+                Button.url("📢 CHANNEL", url="t.me/AsmSafone"),
+                Button.url("SUPPORT 💬", url="t.me/SafoTheBot"),
             ],
         ],
     )
@@ -56,12 +56,12 @@ async def ihelp(event):
 async def beck(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.edit(
-        f"👋🏻 **Hi `{ok.user.first_name}` !**\n\nI'm **Video Compressor HEVC**🔥\n__Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Sample Videos / Screenshots Too 🤗__",
+        f"👋🏻 **Hi `{ok.user.first_name}` !**\n\nI'm **Video Compressor HEVC**🔥\n__Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Sample Videos / Screenshots Too!🤗__",
         buttons=[
             [Button.inline("⚙️ HELP ⚙️", data="ihelp")],
             [
-                Button.url("💬 SUPPORT", url="t.me/SafoTheBot"),
-                Button.url("DEVELOPER 🧑‍💻", url="t.me/I_Am_Only_One_1"),
+                Button.url("📢 CHANNEL", url="t.me/AsmSafone"),
+                Button.url("SUPPORT 💬", url="t.me/SafoTheBot"),
             ],
         ],
     )
@@ -70,7 +70,7 @@ async def beck(event):
 async def sencc(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "Choose One (Default Suggested):",
+        "**Choose An Option:**",
         buttons=[
             [
                 Button.inline("DEFAULT", data=f"encc{key}"),
@@ -84,7 +84,7 @@ async def sencc(e):
 async def back(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "**What Do You Want To Do??** 🤔",
+        "**What Do You Want To Do ?** 🤔",
         buttons=[
             [
                 Button.inline("COMPRESS", data=f"sencc{key}"),
