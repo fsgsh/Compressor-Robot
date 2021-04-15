@@ -118,7 +118,7 @@ async def encc(e):
     a1 = f"https://nekobin.com/{code(await info(dl))}"
     a2 = f"https://nekobin.com/{code(await info(out))}"
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMediainfo: [Before]({a1})♾[After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\nBy @I_Am_Only_One_1 👑",
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMediainfo: [Before]({a1}) | [After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\nBy @I_Am_Only_One_1 👑",
         link_preview=False,
     )
     await ds.forward_to(LOG)
@@ -337,7 +337,7 @@ async def customenc(e, key):
     a1 = f"https://nekobin.com/{code(await info(dl))}"
     a2 = f"https://nekobin.com/{code(await info(out))}"
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMediainfo: [Before]({a1})♾[After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\nBy @I_Am_Only_One_1 👑",
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMediainfo: [Before]({a1}) | [After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\nBy @I_Am_Only_One_1 👑",
         link_preview=False,
     )
     await ds.forward_to(LOG)
