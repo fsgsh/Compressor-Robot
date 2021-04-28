@@ -103,7 +103,7 @@ async def encc(e):
             force_document=True,
             thumb=thum,
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(d, t, nnn, ttt, "uploading..", file=f"{out}")
+                progress(d, t, nnn, ttt, "Uploading...", file=f"{out}")
             ),
         )
         org = int(Path(dl).stat().st_size)
@@ -117,7 +117,7 @@ async def encc(e):
         a1 = await info(dl, e)
         a2 = await info(out, e)
         dk = await ds.reply(
-            f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMediainfo: [Before]({a1}) | [After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\n\n**© @AsmSafone | @SafoTheBot**",
+            f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMediainfo: [Before]({a1}) | [After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\n\n**@AsmSafone | @SafoTheBot**",
             link_preview=False,
         )
         await ds.forward_to(LOG)
@@ -167,7 +167,7 @@ async def sample(e):
             force_document=False,
             thumb=thum,
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(d, t, xxx, ttt, "uploading..", file=f"{out}")
+                progress(d, t, xxx, ttt, "Uploading...", file=f"{out}")
             ),
             buttons=[
                 [
@@ -241,7 +241,7 @@ async def encod(event):
                 event.media,
                 dir,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                    progress(d, t, xxx, ttt, "Downloading")
+                    progress(d, t, xxx, ttt, "Downloading...")
                 ),
             )
         except BaseException:
@@ -253,7 +253,7 @@ async def encod(event):
         rr = f"encode/{user.id}"
         if not os.path.isdir(rr):
             os.mkdir(rr)
-        bb = kk.replace(f".{aa}", " Compressed @AsmSafone.mkv")
+        bb = kk.replace(f".{aa}", " @AsmSafone.mkv")
         out = f"{rr}/{bb}"
         thum = "68ba9706cdf78f28b4a8c.jpg"
         dtime = ts(int((es - s).seconds) * 1000)
@@ -319,7 +319,7 @@ async def customenc(e, key):
             force_document=True,
             thumb=thum,
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(d, t, nnn, ttt, "uploading..", file=f"{out}")
+                progress(d, t, nnn, ttt, "Uploading...", file=f"{out}")
             ),
         )
     except BaseException:
@@ -337,7 +337,7 @@ async def customenc(e, key):
     a1 = await info(dl, e)
     a2 = await info(out, e)
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMediainfo: [Before]({a1}) | [After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\n\n**© @AsmSafone | @SafoTheBot**",
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMediainfo: [Before]({a1}) | [After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}\n\n**@AsmSafone | @SafoTheBot**",
         link_preview=False,
     )
     await ds.forward_to(LOG)
