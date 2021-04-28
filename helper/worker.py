@@ -171,10 +171,10 @@ async def sample(e):
             ),
             buttons=[
                 [
-                    Button.inline("SCREENSHOTS", data=f"sshot{wah}"),
+                    Button.inline("SKIP", data=f"skip{wah}"),
                     Button.inline("COMPRESS", data=f"sencc{wah}"),
                 ],
-                [Button.inline("SKIP", data=f"skip{wah}")],
+                [Button.inline("SCREENSHOTS", data=f"sshot{wah}")],
             ],
         )
         COUNT.remove(e.chat_id)
