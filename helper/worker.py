@@ -231,7 +231,7 @@ async def encod(event):
         gg = await event.client.get_entity(user.id)
         name = f"[{get_display_name(gg)}](tg://user?id={user.id})"
         await event.client.send_message(
-            LOG, f"**#NEW_TASK: PID -** `{len(COUNT)}` \n**STARTED FOR -** {name} "
+            LOG, f"**#NEW_TASK:** `{len(COUNT)}` \n**STARTED FOR:** {name} "
         )
         dir = f"downloads/{user.id}/"
         if not os.path.isdir(dir):
