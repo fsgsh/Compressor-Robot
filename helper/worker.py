@@ -217,12 +217,12 @@ async def encod(event):
         if len(COUNT) > 4 and user.id != OWNER:
             llink = (await event.client(cl(LOG))).link
             return await xxx.edit(
-                "**Server Overloaded 😑** \nAlready 5 Compression Running!",
-                buttons=[Button.url("🤖 Show Bot Status 🤖", url=llink)],
+                "Already 5 Process Going On!⚠️ \n\nPlease Come Back After A While.\nCheck Live Status on Status Channel.",
+                buttons=[Button.url("🤖 Show Live Status 🤖", url=llink)],
             )
         if user.id in COUNT and user.id != OWNER:
             return await xxx.edit(
-                "Already Your 1 Request Processing\nPlease Wait Until It Get Finished! 😊"
+                "Already Your 1 Video Processing\nPlease Wait Until It Get Finished! 😊"
             )
         COUNT.append(user.id)
         s = dt.now()
@@ -231,7 +231,7 @@ async def encod(event):
         gg = await event.client.get_entity(user.id)
         name = f"[{get_display_name(gg)}](tg://user?id={user.id})"
         await event.client.send_message(
-            LOG, f"🎬 **Compressing Video:** {len(COUNT)} \n**Started For:** {name} ✅"
+            LOG, f"#NEW_TASK: \n**PID:-** `{len(COUNT)}` \n**USER:-** {name} "
         )
         dir = f"downloads/{user.id}/"
         if not os.path.isdir(dir):
