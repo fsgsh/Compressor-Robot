@@ -214,7 +214,7 @@ async def encod(event):
         #        "U Must Subscribe This Channel To Use This Bot",
         #       buttons=[Button.url("JOIN CHANNEL", url="t.me/AsmSafone")],
         #   )
-        if len(COUNT) > 4 and user.id != OWNER:
+        if len(COUNT) > 2 and user.id != OWNER:
             llink = (await event.client(cl(LOG))).link
             return await xxx.edit(
                 "Already 5 Process Going On!⚠️ \n\nPlease Come Back After A While.\nCheck Live Status on Status Channel.",
