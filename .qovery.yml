@@ -1,0 +1,11 @@
+---
+application:
+  name: "hevccompressorbot"
+  project: "hevccompressor"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-hevccompressorbot"
+  routes:
+  - application_name: "hevccompressorbot"
+    paths:
+    - "/*"
