@@ -17,7 +17,7 @@ from .config import *
 COUNT = []
 
 uptime = dt.now()
-os.system("wget https://telegra.ph/file/68ba9706cdf78f28b4a8c.jpg")
+os.system("wget https://telegra.ph/file/68ba9706cdf78f28b4a8c.jpg -O thumb.jpg")
 
 if not os.path.isdir("downloads/"):
     os.mkdir("downloads/")
@@ -116,7 +116,7 @@ async def genss(file):
 async def duration_s(file):
     tsec = await genss(file)
     x = round(tsec / 5)
-    y = round(tsec / 5 + 60)
+    y = round(tsec / 5 + 30)
     pin = stdr(x)
     if y < tsec:
         pon = stdr(y)
