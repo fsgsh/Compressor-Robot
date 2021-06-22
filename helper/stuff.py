@@ -29,7 +29,7 @@ async def up(event):
 async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.reply(
-        f"👋🏻 **Hello {ok.user.first_name},**\n\nThis Is **Video Compressor Pro** 🗳\n__Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Sample Videos/ Screenshots Too!🤗__",
+        f"👋🏻 **Hello {ok.user.first_name},**\n\nI'm **Video Compressor Pro** 🗳\nI Can Encode & Compress Your Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Sample Videos/ Screenshots Too 🤗!",
         buttons=[
             [Button.inline("⚙️ HELP ⚙️", data="ihelp")],
             [
@@ -42,13 +42,13 @@ async def start(event):
 
 async def help(event):
     await event.reply(
-        "🗳 **Video Compressor Pro Bot ?**\n\n☑️ Can Compress Your Videos With Negligible Quality Change.\n☑️ Can Generate Sample Videos & Screenshots Too.\n☑️ Just Send or Forward Video To Get Available Options.\n☑️ Due To Quality Settings Bot Takes Time To Compress.\n☑️ So, Be Patience & Send Videos One By One After Completing. Please Don't Spam To The Bot. Otherwise You'll Be Ban For Permanent!\n\n🏷 **Developer: @I_Am_Only_One_1** 👑"
+        "🗳 **Video Compressor Pro Bot :**\n\n☑️ Can Compress Your Videos With Negligible Quality Change.\n☑️ Can Generate Sample Videos & Screenshots Too.\n☑️ Just Send or Forward Video To Get Available Options.\n☑️ Due To Quality Settings Bot Takes Time To Compress.\n☑️ So, Be Patience & Send Videos One By One After Completing. Please Don't Spam To The Bot. Otherwise You'll Be Ban For Permanent!\n\n🏷 **Developer: @I_Am_Only_One_1** 👑"
     )
 
 
 async def ihelp(event):
     await event.edit(
-        "🗳 **Video Compressor Pro Bot ?**\n\n☑️ Can Compress Your Videos With Negligible Quality Change.\n☑️ Can Generate Sample Videos & Screenshots Too.\n☑️ Just Send or Forward Video To Get Available Options.\n☑️ Due To Quality Settings Bot Takes Time To Compress.\n☑️ So, Be Patience & Send Videos One By One After Completing. Please Don't Spam To The Bot. Otherwise You'll Be Ban For Permanent!\n\n🏷 **Developer: @I_Am_Only_One_1** 👑",
+        "🗳 **Video Compressor Pro Bot :**\n\n☑️ Can Compress Your Videos With Negligible Quality Change.\n☑️ Can Generate Sample Videos & Screenshots Too.\n☑️ Just Send or Forward Video To Get Available Options.\n☑️ Due To Quality Settings Bot Takes Time To Compress.\n☑️ So, Be Patience & Send Videos One By One After Completing. Please Don't Spam To The Bot. Otherwise You'll Be Ban For Permanent!\n\n🏷 **Developer: @I_Am_Only_One_1** 👑",
         buttons=[Button.inline("🔙 BACK", data="beck")],
     )
 
@@ -56,7 +56,7 @@ async def ihelp(event):
 async def beck(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.edit(
-        f"👋🏻 **Hello {ok.user.first_name},**\n\nThis Is **Video Compressor Pro** 🗳\n__Which Can Encode & Compress Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Sample Videos/ Screenshots Too!🤗__",
+        f"👋🏻 **Hello {ok.user.first_name},**\n\nI'm **Video Compressor Pro** 🗳\nI Can Encode & Compress Your Videos. Reduce Size of Videos With Negligible Quality Change! You Can Generate Sample Videos/ Screenshots Too 🤗!",
         buttons=[
             [Button.inline("⚙️ HELP ⚙️", data="ihelp")],
             [
@@ -70,7 +70,7 @@ async def beck(event):
 async def sencc(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "**Select An Mode:**",
+        "**Select Compression Mode :**",
         buttons=[
             [
                 Button.inline("DEFAULT", data=f"encc{key}"),
@@ -84,7 +84,7 @@ async def sencc(e):
 async def back(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "**Select An Option:** 🤔",
+        "**Select Required Option :**",
         buttons=[
             [
                 Button.inline("COMPRESS", data=f"sencc{key}"),
@@ -96,7 +96,7 @@ async def back(e):
 
 
 async def ccom(e):
-    await e.edit("Okay, Send Your Custom Name For That File.")
+    await e.edit("Okay, Send Your Custom Name For That File:")
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     out, dl, thum, dtime = wh.split(";")
