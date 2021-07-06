@@ -15,19 +15,7 @@
 
 from .funcn import *
 from .FastTelethon import download_file, upload_file
-from telethon.tl.functions.users import GetFullUserRequest
-from telethon.errors.rpcerrorlist import UserNotParticipantError
-from telethon.tl.functions.channels import GetParticipantRequest
 
-# join check
-async def check_user(id):
-    ok = True
-    try:
-        await cbot(GetParticipantRequest(channel='@AsmSafone', user_id=id))
-        ok = True
-    except UserNotParticipantError:
-        ok = False
-    return ok
 
 async def screenshot(e):
     await e.edit("`Generating Screenshots...`")
@@ -225,13 +213,6 @@ async def encod(event):
         except BaseException:
             pass
         xxx = await event.reply("`Downloading...`")
-        """ For Force Subscribe Channel"""
-        ok = await cbot(GetFullUserRequest(event.sender_id))
-        if (await check_user(event.sender_id)) == False:
-            return await xxx.edit(
-                "**Please Join My Updates Channel To Use Me!**",
-                buttons=[Button.url("🤖 Join Updates Channel 🤖", url="https://t.me/AsmSafone")],
-            )
         if len(COUNT) > 2 and user.id != OWNER:
             llink = (await event.client(cl(LOG))).link
             return await xxx.edit(
