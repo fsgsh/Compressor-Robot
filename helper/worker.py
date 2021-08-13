@@ -47,6 +47,7 @@ async def screenshot(e):
         )
         COUNT.remove(e.chat_id)
         shutil.rmtree(wah)
+        await e.edit("`Done!`")
     except Exception:
         COUNT.remove(e.chat_id)
         shutil.rmtree(wah)
